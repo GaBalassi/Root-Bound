@@ -1,0 +1,49 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# MemoryCaptures and Recordings
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Asset store / IDE generated files
+/Assets/AssetStoreTools*
+/.vs/
+/.vsconfig
+/.vscode/
+/.idea/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity build outputs & logs
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.log
+sysinfo.txt
+crashlytics-build.properties
+
+# OS / temporary files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
