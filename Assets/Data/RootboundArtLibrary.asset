@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061e5fda1114fb34a9e6be59acea9663, type: 3}
+  m_Name: RootboundArtLibrary
+  m_EditorClassIdentifier: Rootbound.Runtime::Rootbound.Core.RootboundArtLibrary
+  playerIdle:
+  - {fileID: 21300000, guid: aeed415dab1b9274b8ce3d126f7b6652, type: 3}
+  - {fileID: 21300000, guid: 1c35d55e03c99a24996a2ff202edea6d, type: 3}
+  - {fileID: 21300000, guid: 6bc6932535eead248bb1f04916ad1202, type: 3}
+  - {fileID: 21300000, guid: 1ee4c3b914d5d8c4e849e93f19f11671, type: 3}
+  playerRun:
+  - {fileID: 21300000, guid: a5c9f43b19b6ce44bb92ae03084915e3, type: 3}
+  - {fileID: 21300000, guid: 358cab850ea70634dacbd8a2641d3832, type: 3}
+  - {fileID: 21300000, guid: 6d45698769c1db74b9a3e62883f4e1f2, type: 3}
+  - {fileID: 21300000, guid: 562790daec5a7964aa37941810b8e2f7, type: 3}
+  - {fileID: 21300000, guid: 3ddcf6adebb25a94f8fd4fe2e7dd5e1e, type: 3}
+  - {fileID: 21300000, guid: 63dd6a44ee2f1594eadb3380c2a53200, type: 3}
+  playerJump:
+  - {fileID: 21300000, guid: 754c6a68d65768b45a586844862be42d, type: 3}
+  - {fileID: 21300000, guid: 3b82497b52d120949bc33b53dc7c95fe, type: 3}
+  playerFall:
+  - {fileID: 21300000, guid: 703c30fdae4e23f40a73e2fcff828be1, type: 3}
+  - {fileID: 21300000, guid: a9b43d53e3e724a4cbc0ef832ba5c272, type: 3}
+  playerDash:
+  - {fileID: 21300000, guid: c6dd223b89be175488e07d3ade8332b5, type: 3}
+  - {fileID: 21300000, guid: 9ea1c3e484d3e364fa36a8b036b89980, type: 3}
+  playerAttack1:
+  - {fileID: 21300000, guid: f27fd891f425b854b9265bddedbc50e7, type: 3}
+  - {fileID: 21300000, guid: e32f7c9a8ce7c7f41b6f7fbe288bdacf, type: 3}
+  playerAttack2:
+  - {fileID: 21300000, guid: f2b02f41e7f3d054aa3925f1e1e11cec, type: 3}
+  - {fileID: 21300000, guid: 28e8bcc092abb45408ce25ef4fbc10ff, type: 3}
+  playerAttack3:
+  - {fileID: 21300000, guid: 92c811a1f3350fe44a3a4bca97c27eb9, type: 3}
+  - {fileID: 21300000, guid: 7fd19b13df74af04899bb409eab89317, type: 3}
+  playerCharge:
+  - {fileID: 21300000, guid: adb6f958fd7ade84993938ff1eca2063, type: 3}
+  - {fileID: 21300000, guid: 4fa910fd186b1004183378742727905b, type: 3}
+  playerRoot:
+  - {fileID: 21300000, guid: 54610ceba3863c04aacb67d353f39426, type: 3}
+  - {fileID: 21300000, guid: 012deab3f5c1b7c43be1499df41eff20, type: 3}
+  playerHurt: {fileID: 21300000, guid: 0c4d06d6bd5049d4f8ea75bb82932660, type: 3}
+  slimeFrames:
+  - {fileID: 21300000, guid: 94aa7357211d8f648a9bc68f5131724d, type: 3}
+  - {fileID: 21300000, guid: 87a5caed9aabb3b489b8c57bbf0d6ce0, type: 3}
+  - {fileID: 21300000, guid: 7fabeae911f3bea4586d766c78be44e6, type: 3}
+  - {fileID: 21300000, guid: 7340d094b61fe4148a103d70f3e16919, type: 3}
+  slimeTelegraph: {fileID: 21300000, guid: fbe2b12f9bc95ab488121d216505ebc2, type: 3}
+  wolfFrames:
+  - {fileID: 21300000, guid: 4548ceebc94029043808ab1df157ea6d, type: 3}
+  - {fileID: 21300000, guid: 26d286091ca7e8e45a84cb6c53ed15ea, type: 3}
+  - {fileID: 21300000, guid: f92becfc5366f6d42a18a050ec111af0, type: 3}
+  - {fileID: 21300000, guid: b9e834c89304cd9419b63ab2e400e338, type: 3}
+  wolfTelegraph: {fileID: 21300000, guid: 31c9142a198ae1a4a9429ba34ab3f886, type: 3}
+  plantFrames:
+  - {fileID: 21300000, guid: 251fd68c30d29394e863eeb5b45b266f, type: 3}
+  - {fileID: 21300000, guid: 9418e55ebe6ca44468ff79f7e63523c5, type: 3}
+  - {fileID: 21300000, guid: 757a68066641ce84f80c0db51cd98686, type: 3}
+  - {fileID: 21300000, guid: c4ce109da7285664fa75e1ca2865df71, type: 3}
+  plantSpit: {fileID: 21300000, guid: 7b41cbefa0b1e714da3b7e7a882195dd, type: 3}
+  bossIdle:
+  - {fileID: 21300000, guid: 70928943390ba9548879bd4d8c5d0ba0, type: 3}
+  - {fileID: 21300000, guid: 2696aade3c095b146890651cba642d97, type: 3}
+  - {fileID: 21300000, guid: 69cbc3733e28d6042b7d3c1f567a43e9, type: 3}
+  - {fileID: 21300000, guid: b711c75720dc23a4b9a313de213ca4fc, type: 3}
+  bossSlam: {fileID: 21300000, guid: f665e90655b17ee4e83b01d1a17653ad, type: 3}
+  bossSummon: {fileID: 21300000, guid: 5d4abf3146ec3ab4daa314ff6d467b86, type: 3}
+  bossStun: {fileID: 21300000, guid: 7e1dfc16845811c44b646d23ce05a9b2, type: 3}
+  bossSpikeFrames:
+  - {fileID: 21300000, guid: 4811e4b98525f4e49948d500963d613f, type: 3}
+  - {fileID: 21300000, guid: 5185abcc1f110864e955f84eef74315d, type: 3}
+  - {fileID: 21300000, guid: f2fcdc671020a504a995a163efd72edf, type: 3}
+  grassTopTiles:
+  - {fileID: 21300000, guid: f901233ea589d3c4d8e6c7a5f65902e2, type: 3}
+  - {fileID: 21300000, guid: b37339ae09fe2444cbf297812b912158, type: 3}
+  - {fileID: 21300000, guid: 041263735bbe46a4d9c92459904d945c, type: 3}
+  dirtTiles:
+  - {fileID: 21300000, guid: 59414a02b691a9f49b6d69b9ca68caca, type: 3}
+  - {fileID: 21300000, guid: e8d519a87e97bee46997d3d7fbec7e59, type: 3}
+  - {fileID: 21300000, guid: 38973a7ab7c6bd74e98b3c79542d4fd0, type: 3}
+  stoneWallTile: {fileID: 21300000, guid: 08f9a3a311c0db647a592a8df0640b9f, type: 3}
+  woodPlatformTile: {fileID: 21300000, guid: e4ad4463214daa54bad82c67c91e5dc2, type: 3}
+  villageGroundTile: {fileID: 21300000, guid: 01fed85f5a7d6e64d8575c353a4feb9c, type: 3}
+  thornsHazardTile: {fileID: 21300000, guid: f20a74886f600b0418a581a8dbc64b69, type: 3}
+  bridgeTile: {fileID: 21300000, guid: 7b4270241dc512a42b262756bc20bab6, type: 3}
+  rootAnchorFrames:
+  - {fileID: 21300000, guid: c2058a58b91b0b042978718e0d4fb97d, type: 3}
+  - {fileID: 21300000, guid: 56686c5b71873724cbfa14cf8f221eb1, type: 3}
+  naturalSwitchOff: {fileID: 21300000, guid: 7a5dc184f81bec54286c6c9dd468e369, type: 3}
+  naturalSwitchOn: {fileID: 21300000, guid: 0703d79d61447a445b701fc25885e8ad, type: 3}
+  chestClosed: {fileID: 21300000, guid: d362e09da17a87c458f3bde459c21f1a, type: 3}
+  chestOpen: {fileID: 21300000, guid: 9c0f488dd3072c142b98ebd17ded05a3, type: 3}
+  portalFrames:
+  - {fileID: 21300000, guid: 3f05b8ca2d8eef14e91f1f9b2db02471, type: 3}
+  - {fileID: 21300000, guid: c1e60996de0fbae428aa813d41eac64c, type: 3}
+  - {fileID: 21300000, guid: 36f03fd8c7f2ffc4c93751f8ece0c31e, type: 3}
+  doorEasy: {fileID: 21300000, guid: 852605bfe2e226d43aaf1e50721f5906, type: 3}
+  doorHard: {fileID: 21300000, guid: 4bf49e38985ed584c96183161ada37c5, type: 3}
+  doorMerchant: {fileID: 21300000, guid: 9e6d5e4a2462de14fbc8537497d52ffe, type: 3}
+  doorBoss: {fileID: 21300000, guid: b208dc01c8f071d47bae1843fd5c6bcf, type: 3}
+  altarSeeds: {fileID: 21300000, guid: df1d415a5893aa247828b8ff2b7a9e54, type: 3}
+  weaponRack: {fileID: 21300000, guid: 65782bedfe88fbf448060924f4146a1e, type: 3}
+  elderNpcFrames:
+  - {fileID: 21300000, guid: f97023fdf91f3414cb8dcde765e2c2db, type: 3}
+  - {fileID: 21300000, guid: 20792eceb7e93d2459ee4ca73841eb1b, type: 3}
+  merchantNpcFrames:
+  - {fileID: 21300000, guid: 27bfd441ed12ad441bb67bf4267ad80e, type: 3}
+  - {fileID: 21300000, guid: ddecb786f75152243a8c7b6bb4469eff, type: 3}
+  treeBgProp: {fileID: 21300000, guid: d6fc84351b4796b42b726b29070aea76, type: 3}
+  mushroomGlow: {fileID: 21300000, guid: bee8baed2602d49489adcf72ae3dc7cc, type: 3}
+  signpost: {fileID: 21300000, guid: 7be330d4cbe163d44b79da1af15346e0, type: 3}
+  skyForest: {fileID: 21300000, guid: 2897b9d688472d347bac843cea76d646, type: 3}
+  skyVillage: {fileID: 21300000, guid: eb0647a9298a19f4e8dda213e0cc941a, type: 3}
+  parallaxFarTrees: {fileID: 21300000, guid: b7dafb5d0c458d741af9b08facafa11a, type: 3}
+  parallaxMidTrunks: {fileID: 21300000, guid: 2587732f6e5c0194cb8cafd2714f61fe, type: 3}
+  parallaxNearCanopy: {fileID: 21300000, guid: ff157d32530b3d7438188984c515076d, type: 3}
+  slashArcs:
+  - {fileID: 21300000, guid: 762e7839fdc263e44be13ba408ca9253, type: 3}
+  - {fileID: 21300000, guid: 4bba70add9bcea74ab2f8f1d1e0b9169, type: 3}
+  - {fileID: 21300000, guid: 04389cef94ac04d419982865f08a257e, type: 3}
+  hammerSmash: {fileID: 21300000, guid: 53602186421396e4795491bea36c6e24, type: 3}
+  whipArc: {fileID: 21300000, guid: d8ff964496033774caca361e8b028af4, type: 3}
+  rootVineSegment: {fileID: 21300000, guid: 0463f098adba3ac498c089d5792775c3, type: 3}
+  rootVineTip: {fileID: 21300000, guid: d0c3d2df16d8adc40a84ad95c2679fc3, type: 3}
+  rootReticle: {fileID: 21300000, guid: 43e76cbfe431b65468e072cb2499f03e, type: 3}
+  projectileSpore: {fileID: 21300000, guid: 1bc2d2888148645469ad61fb6421a0df, type: 3}
+  particleCircle: {fileID: 21300000, guid: 5d6deb1d4995a0f4bbe043b1966f8660, type: 3}
+  particleLeaf: {fileID: 21300000, guid: b06e86eba5496434cb2bb2c2952b6170, type: 3}
+  warnMarker: {fileID: 21300000, guid: 5d212aff6d23d63408b5f091e2bbe84b, type: 3}
+  uiPanel: {fileID: 21300000, guid: c2c8dbef75d93d041acf47e4b2140fcd, type: 3}
+  heartFull: {fileID: 21300000, guid: eebaa5a30e8593a47a1a5196e08798d2, type: 3}
+  heartEmpty: {fileID: 21300000, guid: 53093fe8d79ab0141bfd649bb0b598a7, type: 3}
+  seedIcon: {fileID: 21300000, guid: 1fe2094b9812d1a49b8bc79fb4d716e0, type: 3}
+  coinIcon: {fileID: 21300000, guid: 40307b0837593b54c9330a8227d9f394, type: 3}
+  relicPoison: {fileID: 21300000, guid: 5b848273fbd3c9943b963c65e3e43ab5, type: 3}
+  relicFury: {fileID: 21300000, guid: 2ddc94bf219fb9b4988747829832f934, type: 3}
+  relicWind: {fileID: 21300000, guid: 0bcdbe7082e57634b9529bf6b5fb95ae, type: 3}
+  relicSap: {fileID: 21300000, guid: 64bf14d61071c7c47a0112b21711377b, type: 3}
+  relicOak: {fileID: 21300000, guid: 3575cbbe463e1414c895f498d0cac038, type: 3}
+  weaponBlade: {fileID: 21300000, guid: a6898afd81f7d6f44a01867afef671b5, type: 3}
+  weaponHammer: {fileID: 21300000, guid: ca4d3eeeef3998848a584074ba5a0954, type: 3}
+  weaponWhip: {fileID: 21300000, guid: aaed26cb277597341becead8abba8b05, type: 3}

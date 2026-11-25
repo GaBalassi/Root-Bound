@@ -4,7 +4,7 @@ Action-platformer roguelite 2D in pixel art, sviluppato con Unity 6000.6.2f1 e U
 
 ## Stato del progetto
 
-Configurazione iniziale del progetto Unity: pipeline grafica 2D, pacchetti e impostazioni di input. Questa tappa non contiene ancora scene giocabili o sistemi di gioco.
+Aggiunti sprite pixel art, libreria grafica e strumenti per importazione e generazione degli asset. Non sono ancora presenti scene giocabili.
 
 ## Apertura
 
