@@ -4,7 +4,7 @@ Action-platformer roguelite 2D in pixel art, sviluppato con Unity 6000.6.2f1 e U
 
 ## Stato del progetto
 
-Aggiunti sprite pixel art, libreria grafica e strumenti per importazione e generazione degli asset. Non sono ancora presenti scene giocabili.
+Sprite pixel art, libreria grafica e controller del personaggio con corsa, salto variabile, doppio salto, wall jump e dash. Presenti anche animazioni, effetti di movimento, audio procedurale e camera 2D. Non sono ancora presenti scene giocabili.
 
 ## Apertura
 
