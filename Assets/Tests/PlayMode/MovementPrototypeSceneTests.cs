@@ -106,6 +106,54 @@ namespace Rootbound.Tests
         }
 
         [UnityTest]
+        public IEnumerator RootInputPullsPlayerTowardsAnchorAndEnforcesCooldown()
+        {
+            var player = Object.FindAnyObjectByType<PlayerController2D>();
+            var rootPower = player.GetComponent<RootPowerController>();
+            player.Body.position = new Vector2(8f, 2.05f);
+            player.Body.linearVelocity = Vector2.zero;
+            yield return new WaitForSeconds(0.1f);
+            Assert.IsNotNull(rootPower.CurrentBestTarget);
+            Assert.AreEqual(RootTargetKind.Anchor, rootPower.CurrentBestTarget.Kind);
+
+            InputSystem.QueueStateEvent(_keyboard, new KeyboardState(Key.Q));
+            yield return null;
+            InputSystem.QueueStateEvent(_keyboard, new KeyboardState());
+            yield return new WaitForFixedUpdate();
+            Assert.IsTrue(player.IsRootPulling);
+            Assert.Greater(rootPower.CooldownNormalized, 0f);
+            Assert.IsFalse(rootPower.TryCastRoot(), "La ricarica deve impedire un secondo aggancio immediato.");
+            yield return new WaitForSeconds(0.3f);
+            Assert.Greater(player.Body.position.x, 10f);
+            Assert.Greater(player.Body.position.y, 4f);
+        }
+
+        [UnityTest]
+        public IEnumerator RootSwitchRevealsBridgeAndActivatesOnlyOnce()
+        {
+            var player = Object.FindAnyObjectByType<PlayerController2D>();
+            var naturalSwitch = Object.FindAnyObjectByType<NaturalSwitch>();
+            var bridge = GameObject.Find("TrainingGround").transform.Find("RootBridge").gameObject;
+            Assert.IsFalse(bridge.activeSelf);
+            int activations = 0;
+            naturalSwitch.OnActivated += () => activations++;
+            player.Body.position = new Vector2(26f, 2.05f);
+            player.Body.linearVelocity = Vector2.zero;
+            yield return new WaitForSeconds(0.1f);
+            Assert.AreSame(naturalSwitch, player.GetComponent<RootPowerController>().CurrentBestTarget);
+
+            InputSystem.QueueStateEvent(_keyboard, new KeyboardState(Key.Q));
+            yield return null;
+            InputSystem.QueueStateEvent(_keyboard, new KeyboardState());
+            yield return null;
+            Assert.IsTrue(naturalSwitch.IsActivated);
+            Assert.IsTrue(bridge.activeSelf);
+            Assert.IsFalse(naturalSwitch.IsRootTargetAvailable);
+            naturalSwitch.ActivateFromRoot();
+            Assert.AreEqual(1, activations);
+        }
+
+        [UnityTest]
         public IEnumerator PlayerJumpsThroughAndLandsOnTheOneWayPlatform()
         {
             var player = Object.FindAnyObjectByType<PlayerController2D>();

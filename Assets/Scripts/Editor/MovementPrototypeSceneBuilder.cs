@@ -53,6 +53,22 @@ namespace Rootbound.Editor
             CreatePlatform("Platform_Low", new Rect(7f, 4.2f, 5f, 0.4f), art.woodPlatformTile, terrain);
             CreatePlatform("Platform_High", new Rect(15f, 6.4f, 5f, 0.4f), art.woodPlatformTile, terrain);
             CreatePlatform("Platform_Return", new Rect(24f, 4.6f, 6f, 0.4f), art.woodPlatformTile, terrain);
+            var rootBridge = CreatePlatform("RootBridge", new Rect(29f, 8f, 5f, 0.4f), art.bridgeTile, terrain);
+            var anchors = new RootAnchor[3];
+            var anchorPositions = new[] { new Vector2(12.5f, 7.4f), new Vector2(21f, 9.2f), new Vector2(31f, 8.8f) };
+            for (int i = 0; i < anchors.Length; i++)
+            {
+                var anchorObject = new GameObject("RootAnchor_" + (i + 1));
+                anchorObject.transform.SetParent(terrain, false);
+                anchorObject.transform.position = anchorPositions[i];
+                anchors[i] = anchorObject.AddComponent<RootAnchor>();
+                anchors[i].Initialize(art);
+            }
+            var switchObject = new GameObject("TrainingRootSwitch");
+            switchObject.transform.SetParent(terrain, false);
+            switchObject.transform.position = new Vector3(28f, 2f, 0f);
+            var naturalSwitch = switchObject.AddComponent<NaturalSwitch>();
+            naturalSwitch.Initialize(art, rootBridge);
             for (int x = 0; x < 44; x++)
             {
                 CreateSprite("Grass", art.grassTopTiles[x % art.grassTopTiles.Length],
@@ -74,8 +90,9 @@ namespace Rootbound.Editor
             visual.gameObject.AddComponent<SpriteSheetAnimator>();
             playerObject.AddComponent<PlayerInputReader>();
             var player = playerObject.AddComponent<PlayerController2D>();
+            playerObject.AddComponent<RootPowerController>();
             var controller = new GameObject("MovementPrototype").AddComponent<MovementPrototypeController>();
-            controller.Configure(art, player, follow);
+            controller.Configure(art, player, follow, anchors, naturalSwitch, rootBridge);
             CreateInstructions(camera);
 
             EditorSceneManager.SaveScene(scene, ScenePath);
@@ -104,7 +121,7 @@ namespace Rootbound.Editor
             return renderer.gameObject;
         }
 
-        private static void CreatePlatform(string name, Rect bounds, Sprite sprite, Transform parent)
+        private static GameObject CreatePlatform(string name, Rect bounds, Sprite sprite, Transform parent)
         {
             var obj = CreateBlock(name, bounds, sprite, parent);
             Object.DestroyImmediate(obj.GetComponent<SpriteRenderer>());
@@ -121,6 +138,7 @@ namespace Rootbound.Editor
             effector.useOneWay = true;
             effector.useColliderMask = false;
             effector.surfaceArc = 180f;
+            return obj;
         }
 
         private static void CreateInstructions(Camera camera)
@@ -141,7 +159,7 @@ namespace Rootbound.Editor
             rect.anchorMin = rect.anchorMax = new Vector2(0f, 1f);
             rect.pivot = new Vector2(0f, 1f);
             rect.anchoredPosition = new Vector2(20f, -20f);
-            rect.sizeDelta = new Vector2(620f, 104f);
+            rect.sizeDelta = new Vector2(620f, 128f);
             panel.GetComponent<Image>().color = new Color(0.02f, 0.07f, 0.06f, 0.88f);
             var label = new GameObject("Controls", typeof(RectTransform), typeof(Text));
             label.transform.SetParent(panel.transform, false);
@@ -154,7 +172,7 @@ namespace Rootbound.Editor
             text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             text.fontSize = 20;
             text.color = new Color(0.85f, 1f, 0.87f);
-            text.text = "ROOTBOUND — Allenamento nella foresta\nA / D o frecce: movimento   ·   Spazio: salto / doppio salto\nShift: dash   ·   Salta contro i muri   ·   R: torna all'inizio";
+            text.text = "ROOTBOUND — Allenamento nella foresta\nA / D o frecce: movimento   ·   Spazio: salto / doppio salto\nShift: dash   ·   Salta contro i muri   ·   R: torna all'inizio\nQ / F: radici — aggancia i boccioli o attiva il totem";
             text.raycastTarget = false;
         }
     }
